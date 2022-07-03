@@ -1,0 +1,62 @@
+
+local lspconfig = require("lspconfig")
+
+-- See https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+local function on_attach(client, bufnr)
+
+  local bufopts = { noremap = true, silent = true, buffer = bufnr }
+  local buf = vim.lsp.buf
+  -- Enable completion triggered by <c-x><c-o>
+  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  local function keymap(mode, key, command)
+    vim.keymap.set(mode, key, command, bufopts)
+  end
+
+
+  -- Mappings
+  -- See `:help vim.lsp.*` for documentation on any of the below functions
+
+  -- Mappings.
+  -- See `:help vim.lsp.*` for documentation on any of the below functions
+  -- TODO: When you press `t` over an Elm expression, you get a hover thing with the type computed.
+  --       But when you move the cursor, the popup disappears.
+  --       Is it possible to open it in a new buffer so the type can persist?
+  --
+  --       When using rename, can you automatically save every changed file?
+  --       Or maybe have a y/n way of changing the name?
+  --       To save all unsaved buffers, execute `:writeall`
+
+  keymap("n", "gd", buf.definition)
+  keymap("n", "t", buf.hover)
+  keymap("n", "<leader>rn", buf.rename)
+  keymap("n", "<leader>f", buf.format)
+  keymap("n", "gr", buf.references)
+  keymap("n", "<space>ca", buf.code_action) -- This can be used to name a subexpression and declare it in a var
+
+
+  keymap("n", "gi", buf.implementation)
+  keymap("n", "gD", buf.declaration)
+  keymap("n", "<C-k>", buf.signature_help)
+  keymap("n", "<leader>wa", buf.add_workspace_folder)
+  keymap("n", "<leader>wr", buf.remove_workspace_folder)
+  keymap("n", "<leader>D", buf.type_definition)
+
+  keymap("n", "<leader>wl", function ()
+    print(vim.inspect(buf.list_workspace_folders()))
+  end)
+end
+
+-- Elm
+lspconfig.elmls.setup {
+  on_attach = on_attach,
+} 
+
+-- Scala
+lspconfig.metals.setup {
+  on_attach = on_attach,
+  -- TODO: How to actually configure this?
+  showInferredType = true,
+  showImplicitArguments = true,
+}
+
