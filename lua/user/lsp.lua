@@ -29,20 +29,20 @@ local function on_attach(client, bufnr)
 
   keymap("n", "gd", buf.definition)
   keymap("n", "t", buf.hover)
-  keymap("n", "<leader>rn", buf.rename)
-  keymap("n", "<leader>f", buf.format)
+  keymap("n", "<LocalLeader>rn", buf.rename)
+  keymap("n", "<LocalLeader>f", buf.format)
   keymap("n", "gr", buf.references)
-  keymap("n", "<space>ca", buf.code_action) -- This can be used to name a subexpression and declare it in a var
+  keymap("n", "<LocalLeader>ca", buf.code_action) -- This can be used to name a subexpression and declare it in a var
 
 
   keymap("n", "gi", buf.implementation)
   keymap("n", "gD", buf.declaration)
   keymap("n", "<C-k>", buf.signature_help)
-  keymap("n", "<leader>wa", buf.add_workspace_folder)
-  keymap("n", "<leader>wr", buf.remove_workspace_folder)
-  keymap("n", "<leader>D", buf.type_definition)
+  keymap("n", "<LocalLeader>wa", buf.add_workspace_folder)
+  keymap("n", "<LocalLeader>wr", buf.remove_workspace_folder)
+  keymap("n", "<LocalLeader>D", buf.type_definition)
 
-  keymap("n", "<leader>wl", function ()
+  keymap("n", "<LocalLeader>wl", function ()
     print(vim.inspect(buf.list_workspace_folders()))
   end)
 end

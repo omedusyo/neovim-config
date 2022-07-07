@@ -10,7 +10,7 @@ local function keymap(mode, key, command)
 end
 
 -- Leader
-keymap("", "<Space>", "<Nop>")
+-- keymap("", "<Space>", "<Nop>")
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
@@ -18,8 +18,8 @@ vim.g.maplocalleader = ","
 keymap("", "<leader>h", ":nohlsearch<CR>")
 
 -- Save & Quit
-keymap("", "<leader>w", ":w<CR>")
-keymap("", "<leader>q", ":q<CR>")
+keymap("n", "<leader>w", ":w<CR>")
+keymap("n", "<leader>q", ":q<CR>")
 
 -- Sources init.lua
 -- TODO: How to do this? The following command doesn't seem to work
@@ -29,8 +29,10 @@ keymap("", "<leader>s", ":source " .. myvimrc .. "<CR>")
 keymap("", "<leader>v", ":tabedit " .. myvimdir .. "<CR>")
 
 -- Tabs
-keymap("n", "<C-t>", ":tabedit<CR>")
-keymap("i", "<C-t>", "<ESC>:tabedit<CR>")
+-- keymap("n", "<C-t>", ":tabedit<CR>")
+-- keymap("i", "<C-t>", "<ESC>:tabedit<CR>")
+keymap("n", "<C-t>", ":tab split<CR>")
+keymap("i", "<C-t>", "<ESC>:tab split<CR>")
 
 keymap("n", "<C-h>", ":tabprevious<CR>")
 keymap("i", "<C-h>", "<ESC>:tabprevious<CR>")
@@ -80,7 +82,12 @@ keymap("n", "<C-f>", ":Telescope live_grep<CR>")
 keymap("n", "<leader>b", ":Telescope buffers<CR>")
 keymap("n", "<leader>H", ":Telescope help_tags<CR>")
 
--- Terminal in vim
-keymap("n", "C-m", ":exe v:count1 . \"ToggleTerm\"<CR>")
-keymap("i", "C-m", "<Esc>:exe v:count1 . \"ToggleTerm\"<CR>")
+-- Repeat last macro
+-- TODO
+-- keymap("n", "<C-.>", "@@")
+
+-- My Elm stuff
+-- TODO
+-- keymap("n", "<C-l>", ":lua myElmStuff.insertDebug()<CR>")
+-- keymap("i", "<C-l>", "<Esc>:lua myElmStuff.insertDebug()<CR>i")
 
