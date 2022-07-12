@@ -20,6 +20,8 @@ nvim_tree.setup({
         { key = "u", action = "dir_up" },
         { key = { "l", "<CR>" }, cb = nvim_tree_config.nvim_tree_callback "edit" },
         { key = "h", cb = nvim_tree_config.nvim_tree_callback "close_node" },
+        { key = "<C-e>", action = nil },
+        { key = "?", action = "toggle_help" },
       },
     },
     width = 40,
@@ -29,7 +31,10 @@ nvim_tree.setup({
     group_empty = true,
   },
   filters = {
-    -- dotfiles = true,
+    dotfiles = false,
+  },
+  git = {
+    ignore = false,
   },
 })
 
