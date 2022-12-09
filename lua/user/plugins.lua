@@ -127,6 +127,9 @@ return packer.startup(function(use)
   -- See options.lua `tagbar_ctags_bin` for the path of the binary.
   use "preservim/tagbar"
 
+  -- Signature (for displaying marks in a file)
+  use "kshenoy/vim-signature"
+
   -- PureScript
   use "purescript-contrib/purescript-vim" -- hex/binary viewer. Just write :Hexmode
 

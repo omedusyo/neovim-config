@@ -82,6 +82,7 @@ keymap("n", "<C-p>", ":Telescope find_files<CR>")
 keymap("n", "<C-f>", ":Telescope live_grep<CR>")
 keymap("n", "<leader>b", ":Telescope buffers<CR>")
 keymap("n", "<leader>H", ":Telescope help_tags<CR>")
+keymap("n", "<leader>m", ":Telescope marks<CR>")
 
 
 -- Harpoon
