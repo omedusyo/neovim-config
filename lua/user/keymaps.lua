@@ -73,7 +73,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv")
 
 
 -- File Explorer
--- keymap("n", "<C-n>", ":NvimTreeToggle<CR>")
+-- -- keymap("n", "<C-n>", ":NvimTreeToggle<CR>")
 keymap("n", "<C-n>", ":NvimTreeFindFileToggle<CR>")
 
 

@@ -30,7 +30,9 @@ local function on_attach(client, bufnr)
   keymap("n", "gd", buf.definition)
   keymap("n", "t", buf.hover)
   keymap("n", "<LocalLeader>rn", buf.rename)
+  -- TODO: Would be nice to automatically save the current buffer after the format
   keymap("n", "<LocalLeader>f", buf.format)
+  -- TODO: Would be nice to have a way to cycle through the references with one keypress
   keymap("n", "gr", buf.references)
   keymap("n", "<LocalLeader>ca", buf.code_action) -- This can be used to name a subexpression and declare it in a var
 
@@ -65,3 +67,11 @@ lspconfig.sumneko_lua.setup {
   on_attach = on_attach,
 }
 
+lspconfig.purescriptls.setup {
+  on_attach = on_attach,
+  settings = {
+      purescript = {
+        addSpagoSources = true
+      }
+    },
+}

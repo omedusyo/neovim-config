@@ -16,6 +16,7 @@ local myOptions = {
   updatetime = 300,                   -- faster completion (4000ms default)
   showmode = false,
   -- termguicolors = true,               -- you may want to disable this for solarized
+  backupcopy = "yes",                 -- This is here to make the fucking `parcel --watch` work
 
   -- Line Numbers
   number = true,                      -- Shows line numbers.

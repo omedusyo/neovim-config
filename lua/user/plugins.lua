@@ -39,11 +39,11 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim"  -- Useful lua functions used by lots of plugins.
 
   -- colorschemes
-  use "nanotech/jellybeans.vim"
+  -- use "nanotech/jellybeans.vim"
   use "altercation/vim-colors-solarized"
-  use "tpope/vim-vividchalk"
-  use "fxn/vim-monochrome"
-  use "vyshane/vydark-vim-color"
+  -- use "tpope/vim-vividchalk"
+  -- use "fxn/vim-monochrome"
+  -- use "vyshane/vydark-vim-color"
 
   -- fonts
   use "ryanoasis/vim-devicons"
@@ -54,22 +54,22 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-web-devicons" -- optional, for file icons
 
   -- completion plugins
-  use "hrsh7th/nvim-cmp" -- The completion plugin
-  use "hrsh7th/cmp-buffer" -- buffer completions
-  use "hrsh7th/cmp-path" -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
-  use "hrsh7th/cmp-nvim-lsp" -- LSP completion
+  -- use "hrsh7th/nvim-cmp" -- The completion plugin
+  -- use "hrsh7th/cmp-buffer" -- buffer completions
+  -- use "hrsh7th/cmp-path" -- path completions
+  -- use "hrsh7th/cmp-cmdline" -- cmdline completions
+  -- use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  -- use "hrsh7th/cmp-nvim-lsp" -- LSP completion
 
   -- snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
-  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+  -- use "L3MON4D3/LuaSnip" --snippet engine
+  -- use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- Language Server Protocol
   -- See https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
   use "neovim/nvim-lspconfig" -- enable LSP
   -- TODO: Maybe remove?
-  -- -- this is for scala (compatible with `nvim-lspconfig`)
+  -- this is for scala (compatible with `nvim-lspconfig`)
   -- use {
   --   -- see https://github.com/scalameta/nvim-metals
   --   "scalameta/nvim-metals",
@@ -78,8 +78,8 @@ return packer.startup(function(use)
 
   -- File explorer
   use {
-    "kyazdani42/nvim-tree.lua",
-    requires = { "kyazdani42/nvim-web-devicons" },
+   "kyazdani42/nvim-tree.lua",
+   requires = { "kyazdani42/nvim-web-devicons" },
   }
 
   -- Comments
@@ -97,11 +97,11 @@ return packer.startup(function(use)
 
   -- Start screen
   use {
-    "goolord/alpha-nvim",
-    requires = { "kyazdani42/nvim-web-devicons" },
-    config = function ()
-        require("alpha").setup(require("alpha.themes.startify").config)
-    end
+   "goolord/alpha-nvim",
+   requires = { "kyazdani42/nvim-web-devicons" },
+   config = function ()
+       require("alpha").setup(require("alpha.themes.startify").config)
+   end
   }
 
   -- HTML/CSS
@@ -119,6 +119,9 @@ return packer.startup(function(use)
   -- Viewing binaries
   use "fidian/hexmode" -- hex/binary viewer. Just write :Hexmode
 
+
+  -- PureScript
+  use "purescript-contrib/purescript-vim" -- hex/binary viewer. Just write :Hexmode
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins.
