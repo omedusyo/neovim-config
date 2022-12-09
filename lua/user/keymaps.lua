@@ -99,6 +99,11 @@ for i = 1, 7 do
   keymap("n", tostring(i), ":lua require(\"harpoon.ui\").nav_file(" .. tostring(i) .. ")<CR>")
 end
 
+
+-- Tagbar
+keymap("n", "<tab>", ":TagbarToggle<CR>")
+
+
 -- Repeat last macro
 -- TODO
 -- keymap("n", "<C-.>", "@@")

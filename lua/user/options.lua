@@ -77,3 +77,5 @@ vim.g.hexmode_patterns = '*.bin,*.exe,*.dat,*.o,*.wasm'
 -- LightLine
 vim.g.lightline = { colorscheme = "solarized", }
 
+-- Universal ctags path for tagbar plugin
+vim.g.tagbar_ctags_bin = "~/ctags/bin/ctags"

@@ -120,7 +120,12 @@ return packer.startup(function(use)
   use "fidian/hexmode" -- hex/binary viewer. Just write :Hexmode
 
   -- Harpoon
-  use 'ThePrimeagen/harpoon'
+  use "ThePrimeagen/harpoon"
+
+  -- Tagbar
+  -- You need to install Universal ctag
+  -- See options.lua `tagbar_ctags_bin` for the path of the binary.
+  use "preservim/tagbar"
 
   -- PureScript
   use "purescript-contrib/purescript-vim" -- hex/binary viewer. Just write :Hexmode
