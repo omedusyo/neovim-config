@@ -119,6 +119,8 @@ return packer.startup(function(use)
   -- Viewing binaries
   use "fidian/hexmode" -- hex/binary viewer. Just write :Hexmode
 
+  -- Harpoon
+  use 'ThePrimeagen/harpoon'
 
   -- PureScript
   use "purescript-contrib/purescript-vim" -- hex/binary viewer. Just write :Hexmode

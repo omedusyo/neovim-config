@@ -83,6 +83,22 @@ keymap("n", "<C-f>", ":Telescope live_grep<CR>")
 keymap("n", "<leader>b", ":Telescope buffers<CR>")
 keymap("n", "<leader>H", ":Telescope help_tags<CR>")
 
+
+-- Harpoon
+keymap("n", "<leader>t", ":lua require(\"harpoon.ui\").toggle_quick_menu()<CR>")
+keymap("n", "`", ":lua require(\"harpoon.mark\").add_file()<CR>")
+-- TODO: Remap `<leader>n` to harpoon the current buffer to `n`
+--       Probably can't be done, because this plugin doesn't seem to allow Harpooning the same buffer to multiple indexes.
+-- for i = 1, 9 do
+--   keymap("n", "<leader>" .. tostring(i), ":lua require(\"harpoon.ui\").nav_file(" .. tostring(i) .. ")<CR>")
+-- end
+
+-- The following maps 1, 2, 3, 4, 5, 6, 7 to switch between Harpooned buffers.
+-- TODO: You should recover the functionality of `go_to_line(x)`
+for i = 1, 7 do
+  keymap("n", tostring(i), ":lua require(\"harpoon.ui\").nav_file(" .. tostring(i) .. ")<CR>")
+end
+
 -- Repeat last macro
 -- TODO
 -- keymap("n", "<C-.>", "@@")
