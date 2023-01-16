@@ -125,10 +125,15 @@ return packer.startup(function(use)
   -- Tagbar
   -- You need to install Universal ctag
   -- See options.lua `tagbar_ctags_bin` for the path of the binary.
-  use "preservim/tagbar"
+  -- Seems to hijack <C-i>
+  -- use "preservim/tagbar"
 
   -- Signature (for displaying marks in a file)
   use "kshenoy/vim-signature"
+
+  -- neo-vim in browsers
+  -- Don't forget to run `:GhostInstall` after installation
+  use "raghur/vim-ghost"
 
   -- PureScript
   use "purescript-contrib/purescript-vim" -- hex/binary viewer. Just write :Hexmode

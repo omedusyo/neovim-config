@@ -56,7 +56,8 @@ local myOptions = {
 
   -- Folding
   -- You have three options: indent, syntax, manual (that's the default)
-  foldmethod = "indent",              -- enables folding by indentation
+  foldmethod = "expr",              -- enabled folding with treesitter
+  -- foldmethod = "indent",              -- enables folding by indentation
   -- foldmethod = "syntax",              -- enables folding by syntax
   foldenable = false,
 }

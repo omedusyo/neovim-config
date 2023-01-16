@@ -102,7 +102,7 @@ end
 
 
 -- Tagbar
-keymap("n", "<tab>", ":TagbarToggle<CR>")
+-- keymap("n", "<tab>", ":TagbarToggle<CR>")
 
 
 -- Repeat last macro
