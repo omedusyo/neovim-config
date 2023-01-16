@@ -131,10 +131,6 @@ return packer.startup(function(use)
   -- Signature (for displaying marks in a file)
   use "kshenoy/vim-signature"
 
-  -- neo-vim in browsers
-  -- Don't forget to run `:GhostInstall` after installation
-  use "raghur/vim-ghost"
-
   -- PureScript
   use "purescript-contrib/purescript-vim" -- hex/binary viewer. Just write :Hexmode
 
