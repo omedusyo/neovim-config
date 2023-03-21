@@ -128,6 +128,8 @@ return packer.startup(function(use)
   -- Seems to hijack <C-i>
   -- use "preservim/tagbar"
 
+  use "iamcco/markdown-preview.nvim"
+
   -- Signature (for displaying marks in a file)
   use "kshenoy/vim-signature"
 
